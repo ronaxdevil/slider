@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numors-slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="swiper.min.css" />
+    <style>
+        body {
+            background: #fff;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .swiper-container h2 {
+            color: #1e90ff;
+            padding-left: 15px;
+        }
+
+        .swiper-slide img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            margin: 0 30px 30px;
+        }
+
+        .swiper-slide h5 {
+            color: #1e90ff;
+            text-align: center;
+        }
+
+        .nav-slide {
+            margin-left: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="row">
+            <div class="col-6 mr-5">
+                <h2>catagory</h2>
+            </div>
+            <div class="nav-slide">
+                <div class="row mt-1">
+                    <div class="prev mr-2"><img src="img/prev.svg" alt=""></div>
+                    <div class="next"><img src="img/next.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-wrapper mt-3">
+            <div class="swiper-slide">
+                <img src="img/1.JPG" alt="Developer" />
+                <h5>slide1</h5>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/2.JPG" alt="Developer" />
+                <h5>slide2</h5>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/3.JPG" alt="Developer" />
+                <h5>slide3</h5>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/4.JPG" alt="Developer" />
+                <h5>slide4</h5>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/5.JPG" alt="Developer" />
+                <h5>slide5</h5>
+            </div>
+        </div>
+        <!-- Add Arrows -->
+
+    </div>
+
+
+    <script src="swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 9,
+            centeredSlides: true,
+            spaceBetween: 5,
+            freeMode: true,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.next',
+                prevEl: '.prev',
+            },
+        });
+    </script>
+</body>
+
+</html>
